@@ -1,11 +1,14 @@
 
 Here are the 10 Bash commands that'll help you work faster with your terminal.
+
 Background:
--To execute commands on the command line, you need a shell.
+- To execute commands on the command line, you need a shell.
 
 - The Bash shell is popular in Unix-like operating systems like Mac and Linux. In fact in most Linux distros, Bash is the default shell.
 
 - You can also use Bash in Windows via WSL (Windows Subsystem for Linux).
+
+##Bash Commands
 
 1. Use Control + L to clear the screen and Control + D to exit
 To clear the terminal screen, type clear on the command line.
