@@ -1,5 +1,5 @@
 # Ubuntu EC2 terraform code and bash scripting
-Repo aims to create a standard Ubuntu Ec2 in AWS with Terraform with the following resources:
+Repo aims to create a standard Ubuntu Ec2, with its networking components in AWS with Terraform with the following resources:
 
 - Vpc, subnet, route table, SG, IGW, AMI, keypair, instance
 
