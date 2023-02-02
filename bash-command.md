@@ -126,8 +126,8 @@ Or inside the project folder, we need to create five directories: images, css, s
 
 We can use:
 
-:~$ mkdir {images,css,src,templates,scripts}
-:~$ ls
+:~$   mkdir {images,css,src,templates,scripts}
+:~$   ls
 images css src templates scripts
 :~$ 
 Only one caveat here: just ensure that there are no spaces between the words inside the braces.
