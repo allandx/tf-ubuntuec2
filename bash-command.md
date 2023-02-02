@@ -8,7 +8,7 @@ Background:
 
 - You can also use Bash in Windows via WSL (Windows Subsystem for Linux).
 
-##Bash Commands
+## Bash Commands
 
 1. Use Control + L to clear the screen and Control + D to exit
 To clear the terminal screen, type clear on the command line.
