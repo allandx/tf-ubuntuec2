@@ -102,12 +102,13 @@ It will save you a lot of time, guaranteed!
 9. Use the shell for doing math
 For simple calculations that don't input or output fractions, you can simply use:
 
-:~$ echo $((19*34))
-:~$ 646
+echo $((19*34))
+
+646
 For calculations that involve fractions, just echo the expression and pipe it into the bc command.
 
-:~$ echo "scale=2; 9*3/((2*2)+1)" | bc
-:~$ 5.40
+echo "scale=2; 9*3/((2*2)+1)" | bc
+5.40
 Here, 'scale' is the precision we need. I have specified it to be two decimal points.
 
 10. Use brace expansion to create files in bulk
@@ -121,18 +122,18 @@ We need to create three files for our project: app.html, app.css, and app.js
 
 Instead of creating one by one, we can simply use brace expansion to create all of them in one go.
 
-:~$ touch app.{html,css,js}
-:~$ ls
+touch app.{html,css,js}
+ls
 app.html app.css app.js
-:~$ 
+
 Or inside the project folder, we need to create five directories: images, css, src, templates, and scripts.
 
 We can use:
 
-:~$   mkdir {images,css,src,templates,scripts}
-:~$   ls
+mkdir {images,css,src,templates,scripts}
+ls
 images css src templates scripts
-:~$ 
+
 Only one caveat here: just ensure that there are no spaces between the words inside the braces.
 
 source: https://www.freecodecamp.org/news/bash-command-line-tips-to-help-you-work-faster/
