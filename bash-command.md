@@ -10,14 +10,14 @@ Background:
 
 ## Bash Commands
 
-1. Use Control + L to clear the screen and Control + D to exit
+### 1. Use Control + L to clear the screen and Control + D to exit
 To clear the terminal screen, type clear on the command line.
 
 To exit, type exit.
 
 Better still, pressing Ctrl + l ( ⌘ + l ) clears the screen and Ctrl + d (⌘ + d) closes the terminal.
 
-2. Use the nohup command to spawn processes that don't end with the terminal session
+### 2. Use the nohup command to spawn processes that don't end with the terminal session
 Once programs are loaded into memory, they are called processes.
 
 Sometimes, I open Firefox from the command line:
@@ -35,7 +35,7 @@ nohup firefox https://freecodecamp.org &
 
 Now even if I quit the terminal, my tabs are all intact.
 
-3. Use pkill to kill processes by typing in only a part of the name
+### 3. Use pkill to kill processes by typing in only a part of the name
 By using the killall command, we can kill a process by its name:
 
 killall firefox
@@ -44,19 +44,19 @@ Better still, use pkill to terminate by typing only a part of the name.
 
 pkill fire*
 
-4. Prepend the time command to know how fast something executes
+### 4. Prepend the time command to know how fast something executes
 Do you want to know how long it takes something to execute in the shell?
 
 Just prepend time to the command: time gcc -g *.c.
 
-5. On Linux, use cat /etc/*rel* to view the distro name
+### 5. On Linux, use cat /etc/*rel* to view the distro name
 Typing uname -a shows the system information.
 
 Wanna double check what distro you're running?
 
 Just type cat /etc/*rel* on the shell and press enter.
 
-6. Use the sed command in text files to find and replace
+### 6. Use the sed command in text files to find and replace
 Do you want to replace multiple occurrences of a word in a text file?
 
 Use the sed command.
@@ -77,7 +77,7 @@ Simply using sed only replaces on the standard output. The original file is unch
 
 To change the file 'in place', use the -i flag: sed -i s'_apples_oranges_g' myfile.txt.
 
-7. Know the public IP address of your computer using curl
+### 7. Know the public IP address of your computer using curl
 There are two types of IP addresses: private and public.
 
 A system assigns internal IP addresses which can be checked using the ifconfig command.
@@ -86,7 +86,7 @@ But do you want to know the public IP of your computer – the IP address that t
 
 While online, just use curl ifconfig.me ; echo  or curl ifconfig.co ; echo on the command line.
 
-8. Use Ctrl + R (⌘ + R) for reverse search
+### 8. Use Ctrl + R (⌘ + R) for reverse search
 Pressing the 'up' arrow key shows the last command you've typed.
 
 Typing history shows all the commands you have typed that are stored in bash history.
@@ -99,7 +99,7 @@ If you remember only one thing from this tutorial, remember this key combination
 
 It will save you a lot of time, guaranteed!
 
-9. Use the shell for doing math
+### 9. Use the shell for doing math
 For simple calculations that don't input or output fractions, you can simply use:
 
 echo $((19*34))
@@ -111,7 +111,7 @@ echo "scale=2; 9*3/((2*2)+1)" | bc
 5.40
 Here, 'scale' is the precision we need. I have specified it to be two decimal points.
 
-10. Use brace expansion to create files in bulk
+### 10. Use brace expansion to create files in bulk
 How do we create 100 files inside a folder?
 
 file1.txt, file2.txt, file3.txt ... file100.txt
