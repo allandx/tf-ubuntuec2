@@ -6,4 +6,6 @@ Repo aims to create a standard Ubuntu Ec2, with its networking components in AWS
 It authenticates into AWS using credentials file in ~/.aws/config. The profile name shall be named "cc"
 Key name is "my_key" using existing id_rsa.pub in ~/.ssh located within local machine
 
+This code is a "plug and play" after AWS authentication is done
+
 
