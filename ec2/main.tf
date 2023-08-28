@@ -80,19 +80,35 @@ data "aws_ami" "server_ami" {
   }
 }
 
+#Resource to create a SSH private key
+resource "tls_private_key" "demo_key" {
+  algorithm = "RSA"
+  rsa_bits  = 4096
+}
+
+#Resource to Create Key Pair
+resource "aws_key_pair" "generated_key" {
+  key_name   = var.key_pair_name
+  public_key = tls_private_key.demo_key.public_key_openssh
+  provisioner "local-exec"{
+    command = "echo '${tls_private_key.demo_key.private_key_pem}' > ./${var.key_pair_name}.pem"
+  }
+}
+
 #####Key pair#########
+/*
 resource "aws_key_pair" "my_auth" {
   key_name   = "my_key"
   public_key = file("~/.ssh/id_rsa.pub")
 }
-
+*/
 #####ubuntu-ec2#######
 resource "aws_instance" "ec2_dev" {
   instance_type          = "t2.medium"
   ami                    = data.aws_ami.server_ami.id
   vpc_security_group_ids = [aws_security_group.my_sg.id]
   subnet_id              = aws_subnet.my_public_subnet.id
-  key_name               = aws_key_pair.my_auth.id
+  key_name               = aws_key_pair.generated_key.key_name
 
   root_block_device {  
     volume_size = 20
