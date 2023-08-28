@@ -12,3 +12,5 @@ As this is for developement purpose using a sandbox environment that ends in a s
 4. This code is a "plug and play" after AWS authentication is done
 
 
+ref:
+https://cloudkatha.com/how-to-create-key-pair-in-aws-using-terraform-in-right-way/#google_vignette
